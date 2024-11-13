@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take attendence</title>
+    <link rel="stylesheet" href="/css/app3.css">
+</head>
+<body>
+    <h1>MARK THE ATTENDENCE</h1>
+
+    <form action="/takeattendance" method="Post">
+
+        <div class="labels">
+        <input type="text" name="className" value="<%=lowercaseClassname%>">
+        <input type="text" name="subject" value="<%=lowercaseSubject%>">
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>RollNo</th>
+                    <th>Name</th>
+                    <th>Mark</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% student.forEach((student)=>{%>
+                    <tr>
+                        <td><%=student.rollNumber%></td>
+                        <td><%=student.name%></td>
+                        <td><input type="checkbox" name="present" value="<%=student._id%>"></td>
+                    </tr>
+
+                <%})%>
+            </tbody>
+        </table>
+       <button type="submit">Submit Attendance</button>
+    </form>
+
+    
+</body>
+</html>

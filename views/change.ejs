@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/app1.css">
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+        <H1>ADD STUDENT</H1>
+
+        <form  action="/addstudent"method="post">
+            <label for="name">name :</label>
+            <input type="text" name="name" id="name" required>
+            <br>
+            <label for="class">class :</label>
+            <input type="text" name="class" id="class" required>
+            <br>
+            <label for="rollNumber"> rollNumber:</label>
+            <input type="text" name="rollNumber" id="rollNumber" required>
+            <br>
+            <label for="uniqueId">uniqueId :</label>
+            <input type="text" name="uniqueId" id="uniqueId" required>
+            <br>
+            <label for="password">Password :</label>
+            <input type="password" name="password" id="password" required>
+
+            <br>
+            <br>
+             <button type="submit">Submit</button>
+
+        </form>
+
+       
+        
+    </div> 
+    <div class="box">
+        <h1>ADD TEACHER</h1>
+        <form action="/addteacher" method="post">
+            <label for="name">name:</label>
+            <input type="text" name="name" id="name" required>
+            <br>
+            <label for="subject">subject  :</label>
+            <input type="text" name="subject" id="subject" required>
+            
+            <br>
+            <label for="uniqueId">uniqueId :</label>
+            <input type="text" name="uniqueId" id="uniqueId" required>
+            <br>
+            <label for="password">Password :</label>
+            <input type="password" name="password" id="password" required>
+
+            <br>
+            <br>
+             <button type="submit">Submit</button>
+
+    </form>
+
+        
+    </div> 
+    <div class="box">
+        <h1>REMOVE STUDENT</h1>
+
+        <form action="/removestudent" method="Post">
+            <label for="uniqueId">uniqueId :</label>
+            <input type="text" name="uniqueId" id="uniqueId"required>
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div> 
+    <div class="box">
+        <H1>REMOVE TEACHER</H1>
+        <form action="/removeteacher" method="post">
+        <label for="uniqueId">uniqueId :</label>
+        <input type="text" name="uniqueId" id="uniqueId" required>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+        </form>
+
+        
+    </div> 
+
+    <div class="box">
+        <h1>ADD SUBJECT</h1>
+
+        <form action="/addSubject" method="post">
+            <label for="subject">Subject :</label>
+            <input type="text" name="subject" id="subject" required>
+            <br>
+            <br>
+            <label for="className">className:</label>
+            <input type="text" name="className" id="className" required>
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+            </form>
+
+    </div>
+
+    
+    </div> 
+
+    
+    
+    
+        
+
+</body>
+</html>

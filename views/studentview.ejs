@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentView</title>
+    <link rel="stylesheet" href="/css/app2.css">
+</head>
+<body>
+
+    <h1>Student Portal</h1>
+
+    <div class="container">
+        <!-- Student Identity Section -->
+        <div class="identity">
+            <h2><i>Name:</i> <%= student.name %></h2>
+            <h3><i>Class:</i> <%= student.class %></h3>
+            <h3><i>UniqueId:</i> <%= student.uniqueId %></h3>
+            <h3><i>RollNo:</i> <%= student.rollNumber %></h3>
+        </div>
+
+        <!-- Attendance Summary Table -->
+        <div class="attendance">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Attendance</th>
+                        <th>Total Classes</th>
+                        <th>Attendance %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (student.subjects && student.subjects.length > 0) { %>
+                        <% student.subjects.forEach(subject => { %>
+                            <tr>
+                                <td><%= subject.name %></td>
+                                <td><%= subject.attendance %></td>
+                                <td><%= subject.totalclass %></td>
+                                <td>
+                                    <% const attendancePercentage = (subject.attendance / subject.totalclass * 100).toFixed(2); %>
+                                    <%= attendancePercentage %>%
+                                </td>
+                            </tr>
+                        <% }) %>
+                    <% } else { %>
+                        <tr>
+                            <td colspan="4">No subjects available</td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Absence Record Table -->
+        <div class="absence">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Subject</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (student.absence && student.absence.length > 0) { %>
+                        <% student.absence.forEach(absence => { %>
+                            <tr>
+                                <td><%= absence.date %></td>
+                                <td><%= absence.subject %></td>
+                                <td><%= absence._id %></td>
+                            </tr>
+                        <% }) %>
+                    <% } else { %>
+                        <tr>
+                            <td colspan="3">Your Attendance is 100%</td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Overall Attendance Section -->
+        <div class="overall-attendance">
+            <h3>Overall Attendance:</h3>
+            <% 
+                const totalAttendance = student.subjects.reduce((sum, subj) => sum + subj.attendance, 0);
+                const totalClasses = student.subjects.reduce((sum, subj) => sum + subj.totalclass, 0);
+                const overallAttendancePercentage = (totalAttendance / totalClasses * 100).toFixed(2);
+            %>
+            <p><%= overallAttendancePercentage %> %</p>
+        </div>
+    </div>
+
+</body>
+</html>

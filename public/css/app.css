@@ -1,0 +1,139 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Soft blue gradient */
+    color: #333;
+    padding: 20px;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2.4rem;
+    color: #1f3b4d; /* Dark blue-gray for a professional look */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.05);
+}
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-width: 360px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+button {
+    background-color: #007bff; /* Bright blue */
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+    transform: scale(0.98);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Form and Input Styling */
+form {
+    height: auto;
+    width: auto;
+}
+
+input {
+    width: 90%;
+    max-width: 300px;
+    height: 40px;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    margin-top: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff; /* Matches button color */
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    color: #495057;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        padding: 30px 20px;
+        max-width: 320px;
+    }
+
+    button {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
+}
+
+
+.login-info {
+    font-size: 0.7em; /* Small font size */
+    color: #888;      /* Light gray color */
+    margin-top: 10px;
+    text-align: center; /* Center align if needed */
+}
