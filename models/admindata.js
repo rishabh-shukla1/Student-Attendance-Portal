@@ -33,6 +33,6 @@ const createDefaultAdmin = async () => {
 };
 
 // Call the function to create a default admin when this file is executed
-createDefaultAdmin();
+// createDefaultAdmin();
 
 module.exports=Admin;
