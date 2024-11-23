@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif; /* Updated font */
+    font-family: 'Roboto', sans-serif; /* Font for uniformity */
 }
 
 /* Body Styles */
@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #36D1DC, #5B86E5); /* More vibrant gradient */
+    background: linear-gradient(135deg, #36D1DC, #5B86E5); /* Vibrant gradient background */
     padding: 20px;
 }
 
@@ -25,15 +25,15 @@ body {
     max-width: 800px;
     width: 100%;
     text-align: center;
-    animation: slideIn 0.8s ease;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    animation: slideIn 0.8s ease;
 }
 
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column for smaller screens */
     }
 }
 
@@ -50,7 +50,7 @@ body {
     width: 100%;
 }
 
-/* Adjusting the image size */
+/* Image Styling */
 .login-box img {
     width: 100px;
     height: 100px;
@@ -61,18 +61,18 @@ body {
     padding: 10px;
 }
 
-/* Adjusting the text size */
+/* Heading Styling */
 .login-box h2 {
-    font-size: 2rem; /* Larger font size */
+    font-size: 2rem;
     color: #36D1DC;
     margin-bottom: 15px;
-    font-weight: 600; /* Bold text */
+    font-weight: 600;
 }
 
-/* Button Styles */
+/* Button Styling */
 .login-box button {
     background: linear-gradient(135deg, #36D1DC, #5B86E5);
-    color: #fff;
+    color: #ffffff;
     border: none;
     padding: 15px 30px;
     border-radius: 12px;
@@ -89,7 +89,7 @@ body {
     background: linear-gradient(135deg, #36D1DC, #3F84E5); /* Slightly darker hover effect */
 }
 
-/* Hover effect for login box */
+/* Login Box Hover Effect */
 .login-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 123, 255, 0.4);
@@ -136,3 +136,4 @@ body {
         transform: translateY(0);
     }
 }
+
