@@ -5,6 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/app.css">
     <title>Attendance Portal</title>
+     <style>
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Updated font */
+}
+
+/* Body Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #36D1DC, #5B86E5); /* More vibrant gradient */
+    padding: 20px;
+}
+
+/* Container Styles */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    animation: slideIn 0.8s ease;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Login Box Styles */
+.login-box {
+    background: #f7f9fc;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Adjusting the image size */
+.login-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 4px solid #36D1DC; /* Updated border color */
+    background: #ffffff;
+    padding: 10px;
+}
+
+/* Adjusting the text size */
+.login-box h2 {
+    font-size: 2rem; /* Larger font size */
+    color: #36D1DC;
+    margin-bottom: 15px;
+    font-weight: 600; /* Bold text */
+}
+
+/* Button Styles */
+.login-box button {
+    background: linear-gradient(135deg, #36D1DC, #5B86E5);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-box button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(54, 209, 220, 0.5);
+    background: linear-gradient(135deg, #36D1DC, #3F84E5); /* Slightly darker hover effect */
+}
+
+/* Hover effect for login box */
+.login-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.4);
+}
+
+/* Decorative Element */
+.login-box::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    background: radial-gradient(circle, #99d7ff, #36D1DC);
+    width: 150px;
+    height: 150px;
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .login-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .login-box button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+     </style>
+
 </head>
 <body>
 
